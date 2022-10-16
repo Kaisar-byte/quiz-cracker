@@ -1,21 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useLoaderData } from 'react-router-dom';
-import Quiz from '../Quiz/Quiz';
-
 
 const Home = () => {
-    const allquizs = useLoaderData()
-    const [quizdata, setQuizdata] = useState(allquizs.data)
+    const quizTopics = useLoaderData()
+    const topics = quizTopics.data
+    console.log(topics)
     return (
         <div>
-            < div className='flex gap-3'>
-                {
-                    quizdata.map(quiz => <Quiz quiz={quiz}></Quiz>)
-                }
-            </div >
-
-        </div >
-
+            <h2>THis is home page</h2>
+        </div>
     );
 };
 
