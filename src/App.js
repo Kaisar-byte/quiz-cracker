@@ -2,11 +2,10 @@ import logo from './logo.svg';
 import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Main from './components/layout/Main';
-import ErrorPage from './components/ErrorPage/ErrorPage';
-import Topics from './components/Topics/Topics';
-import Statistic from './components/Statistic/Statistic';
 import Home from './components/Home/Home';
-
+import Topics from './components/Topics/Topics';
+import ErrorPage from './components/ErrorPage/ErrorPage';
+import Statistics from './components/Statistics/Statistics';
 
 function App() {
   const router = createBrowserRouter([
@@ -17,11 +16,12 @@ function App() {
       children: [
         {
           path: '/',
-          loader: () => fetch(`https://openapi.programming-hero.com/api/quiz`),
-          element: <Home></Home>
+          loader: () => fetch(' https://openapi.programming-hero.com/api/quiz'),
+          element: <Home></Home>,
         },
         {
           path: '/home',
+          loader: () => fetch(' https://openapi.programming-hero.com/api/quiz'),
           element: <Home></Home>
         },
         {
@@ -30,8 +30,8 @@ function App() {
         },
         {
           path: '/statistics',
-          element: <Statistic></Statistic>
-        }
+          element: <Statistics></Statistics>
+        },
       ]
     }
   ])
