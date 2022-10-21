@@ -1,8 +1,10 @@
-Name of Web Application: ONLINE-QUIZ-TEST
+**Name of Web Application:** ONLINE-QUIZ-TEST
 
 Type of Application: React Application made by tailwindcss
+:--------------------:------------------------------------
 
-Tools used for developing the site
+**Tools used for developing the site**
+:------------:----------------:-----
 	ReactJS
 	TailwindCSS
 	AOS
@@ -10,5 +12,11 @@ Tools used for developing the site
 	Rechart
 	React Toastify
 
-Live Site: 
+**Live Site: **
+::::::::::::::
+
 https://boisterous-dolphin-e08f31.netlify.app/
+
+
+**Creator: **
+Kaisar
