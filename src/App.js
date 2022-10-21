@@ -7,10 +7,8 @@ import Topics from './components/Topics/Topics';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 import Statistics from './components/Statistics/Statistics';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 import Topic from './components/Topic/Topic';
 import Blog from './Blog/Blog';
-import About from './About/About';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';

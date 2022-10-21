@@ -8,16 +8,15 @@ const Statistics = () => {
     return (
         <div>
             <h2>Data Chart</h2>
-            <div className='mx-auto w-[550px]'>
-                <LineChart width={650} height={500} data={data.data} className="p-4" >
+            <div className='rounded-md bg-gradient-to-r from-sky-500 to-indigo-500 mx-auto w-[550px]'>
+                <LineChart width={500} height={500} data={data.data} className="p-4" >
                     <XAxis dataKey="name" />
-                    <YAxis dataKey="total" />
-                    <ZAxis dataKey="id" />
+                    <YAxis />
                     <Tooltip />
                     <Legend />
                     <CartesianGrid stroke="black" strokeDasharray="5 5" />
-                    <Line type="monotone" dataKey="name" stroke="pink" />
-                    <Line type="monotone" dataKey="total" stroke="green" />
+                    <Line type="monotone" dataKey="name" stroke="indigo" />
+                    <Line type="monotone" dataKey="total" stroke="white" />
                 </LineChart>
             </div>
         </div >

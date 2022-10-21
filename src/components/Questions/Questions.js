@@ -3,15 +3,11 @@ import Option from '../../Option/Option';
 import { faEye } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Questions.css'
+import Swal from 'sweetalert2'
 
 
 const Questions = ({ EachQuestion }) => {
     const { correctAnswer, id, options, question } = EachQuestion;
-    // console.log(EachQuestion);
-
-    const showAnswer = (option) => {
-
-    }
 
 
     return (
@@ -19,9 +15,8 @@ const Questions = ({ EachQuestion }) => {
             <div>
                 <div className='flex justify-between bg-orange-500 py-4 px-4 rounded-tl-md rounded-tr-md text-3xl'>
                     {question}
-                    <button onClick={showAnswer}>
-                        <p><FontAwesomeIcon className='text-white-400 text-2xl' icon={faEye} /></p>
-                    </button>
+                    <p><FontAwesomeIcon className='text-white-400 text-2xl' icon={faEye} /></p>
+
                 </div>
             </div>
             <div className='bg-yellow-600 text-2xl px-2 py-2'>
