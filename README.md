@@ -12,11 +12,11 @@ Type of Application: React Application made by tailwindcss
 	Rechart
 	React Toastify
 
-**Live Site: **
-::::::::::::::
-
+**Live Site (Netlify): **
 https://boisterous-dolphin-e08f31.netlify.app/
 
+GitHub:
+https://github.com/programming-hero-web-course2/b6-quiz-crackerz-Kaisar-byte
 
 **Creator: **
 Kaisar
