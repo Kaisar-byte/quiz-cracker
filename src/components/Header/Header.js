@@ -5,15 +5,6 @@ import AOS from 'aos';
 
 
 const Header = () => {
-    // useEffect(() => {
-    //     AOS.init({ duration: 2000 });
-    //     AOS.refresh();
-    // }, [])
-    // useEffect(() => {
-    //     AOS.init({ duration: 2000 });
-    //     AOS.refresh();
-    // }, [])
-
 
     return (
         <div className='py-2 bg-yellow-500 text-xl bg-gradient-to-r from-violet-500 to-fuchsia-500'>

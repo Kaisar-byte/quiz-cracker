@@ -14,6 +14,7 @@ import About from './About/About';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 
 function App() {
@@ -49,11 +50,8 @@ function App() {
         },
         {
           path: '/statistics',
+          loader: () => fetch(`https://openapi.programming-hero.com/api/quiz`),
           element: <Statistics></Statistics>
-        },
-        {
-          path: '/about',
-          element: <About></About>
         }
       ]
     }
