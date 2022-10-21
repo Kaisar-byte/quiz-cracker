@@ -19,7 +19,7 @@ const Home = () => {
             <div className='grid grid-cols-4 gap-2 justify-center item-center m-8 '>
                 {
                     data.map(topic => <Topics key={topic.id} topic={topic}></Topics>)
-                    // data.map(topic => console.log(topic))
+
                 }
             </div>
         </div >

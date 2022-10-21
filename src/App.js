@@ -8,6 +8,8 @@ import ErrorPage from './components/ErrorPage/ErrorPage';
 import Statistics from './components/Statistics/Statistics';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import Topic from './components/Topic/Topic';
+
 
 function App() {
   const router = createBrowserRouter([
@@ -26,9 +28,15 @@ function App() {
           loader: () => fetch(' https://openapi.programming-hero.com/api/quiz'),
           element: <Home></Home>
         },
+        // {
+        //   path: '/topics',
+        //   loader: ({ params }) => fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`),
+        //   element: <Topics></Topics>
+        // },
         {
-          path: '/topics',
-          element: <Topics></Topics>
+          path: '/topic/:topicId',
+          loader: ({ params }) => fetch(`https://openapi.programming-hero.com/api/quiz/${params.topicId}`),
+          element: <Topic></Topic>
         },
         {
           path: '/statistics',
