@@ -1,24 +1,13 @@
 import React from 'react';
+import Swal from 'sweetalert2'
 
 const Option = ({ option, correctAnswer }) => {
-
-
     const handleOptionBtn = (option) => {
-
-
-        // const rt = (option.value === correctAnswer.value) ? console.log('tick ache') : console.log('tick nai')
         const clickedAns = option
-        if (clickedAns === correctAnswer) {
-            alert('akon tick ache')
-        } else {
-            console.log('tick nai');
+        if (clickedAns !== correctAnswer) {
+            Swal.fire('You have selected a wrong answer')
         }
-        // console.log(correctAnswer)
-        // console.log(clickedAns);
-
     }
-
-
     return (
         <div className='border-2 border-gray-300 rounded-md p-4 '>
             <button onClick={() => handleOptionBtn(option)}>

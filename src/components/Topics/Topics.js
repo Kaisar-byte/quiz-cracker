@@ -1,12 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Topics = ({ topic }) => {
-    // console.log(topic);
+
     const { id, name, logo, total } = topic
 
     return (
-        <div className='border-2 rounded-3xl bg-cyan-500 px-2 flex h-full -mt-[82px] py-24'>
+        <div data-aos="flip-left" className='border-2 rounded-3xl bg-cyan-500 px-2 flex h-full -mt-[82px] py-24'>
             <div className='flex flex-col gap-2 justify-center items-center'>
                 <img className='w-5/6 mr-4 rounded-full bg-red-400' src={logo} alt="" />
             </div>

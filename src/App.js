@@ -9,9 +9,19 @@ import Statistics from './components/Statistics/Statistics';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 import Topic from './components/Topic/Topic';
+import Blog from './Blog/Blog';
+import About from './About/About';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 
 function App() {
+
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+    // AOS.refresh();
+  }, []);
   const router = createBrowserRouter([
     {
       path: '/',
@@ -28,11 +38,10 @@ function App() {
           loader: () => fetch(' https://openapi.programming-hero.com/api/quiz'),
           element: <Home></Home>
         },
-        // {
-        //   path: '/topics',
-        //   loader: ({ params }) => fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`),
-        //   element: <Topics></Topics>
-        // },
+        {
+          path: '/blog',
+          element: <Blog></Blog>
+        },
         {
           path: '/topic/:topicId',
           loader: ({ params }) => fetch(`https://openapi.programming-hero.com/api/quiz/${params.topicId}`),
@@ -42,8 +51,13 @@ function App() {
           path: '/statistics',
           element: <Statistics></Statistics>
         },
+        {
+          path: '/about',
+          element: <About></About>
+        }
       ]
     }
+
   ])
   return (
     <div className="App">

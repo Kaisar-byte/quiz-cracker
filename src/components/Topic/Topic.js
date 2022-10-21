@@ -1,13 +1,15 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Questions from '../Questions/Questions';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Topic = () => {
     const quizs = useLoaderData()
     const { data } = quizs
     const { id, logo, name, questions, total } = data
     return (
-        <div className='mt-12'>
+        <div className='mt-12' data-aos="zoom-in">
             <div className='flex justify-between items-center border-2 w-11/12 mx-auto bg-cyan-700 p-4 text-white mb-4 rounded-md'>
                 <img className='w-24 border-2 bg-gray-400 rounded-full'
                     src={logo} alt="" />
